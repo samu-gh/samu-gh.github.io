@@ -1,0 +1,147 @@
+@article{bitterli2020,
+  title = {Spatiotemporal Reservoir Resampling for Real-Time Ray Tracing with Dynamic Direct Lighting},
+  author = {Bitterli, Benedikt and Wyman, Chris and Pharr, Matt and Shirley, Peter and Lefohn, Aaron and Jarosz, Wojciech},
+  year = {2020},
+  month = aug,
+  journal = {ACM Transactions on Graphics},
+  volume = {39},
+  number = {4},
+  pages = {148:148:1--148:148:17},
+  issn = {0730-0301},
+  doi = {10.1145/3386569.3392481},
+  urldate = {2024-05-02},
+  abstract = {Efficiently rendering direct lighting from millions of dynamic light sources using Monte Carlo integration remains a challenging problem, even for off-line rendering systems. We introduce a new algorithm---ReSTIR---that renders such lighting interactively, at high quality, and without needing to maintain complex data structures. We repeatedly resample a set of candidate light samples and apply further spatial and temporal resampling to leverage information from relevant nearby samples. We derive an unbiased Monte Carlo estimator for this approach, and show that it achieves equal-error 6{\texttimes}-60{\texttimes} faster than state-of-the-art methods. A biased estimator reduces noise further and is 35{\texttimes}-65{\texttimes} faster, at the cost of some energy loss. We implemented our approach on the GPU, rendering complex scenes containing up to 3.4 million dynamic, emissive triangles in under 50 ms per frame while tracing at most 8 rays per pixel.},
+  keywords = {photorealistic rendering,real-time rendering,resampled importance sampling,reservoir sampling},
+  file = {D\:\\Research\\Zotero\\storage\\DGYISDTL\\Bitterli et al. - 2020 - Spatiotemporal reservoir resampling for real-time .pdf;D\:\\Research\\Zotero\\storage\\SA4AA6H6\\bitterli20restir-supplemental.pdf}
+}
+
+@book{dutre2006,
+  title = {Advanced Global Illumination},
+  author = {Dutr{\'e}, Philip and Bala, Kavita and Bekaert, Philippe},
+  year = {2006},
+  edition = {2nd},
+  publisher = {AK Peters},
+  address = {Wellesley, Mass},
+  abstract = {This book provides a fundamental understanding of global illumination algorithms. It discusses a broad class of algorithms for realistic image synthesis and introduces a theoretical basis for the algorithms presented. Topics include: physics of light transport, Monte Carlo methods, general strategies for solving the rendering equation, stochastic path-tracing algorithms such as ray tracing and light tracing, stochastic radiosity including photon density estimation and hierarchical Monte Carlo radiosity, hybrid algorithms, metropolis light transport, irradiance caching, photon mapping and insta},
+  isbn = {978-1-56881-307-3 978-1-4398-6495-1},
+  langid = {english}
+}
+
+@article{hedstrom2025,
+  title = {{{ReSTIR BDPT}}: {{Bidirectional ReSTIR Path Tracing}} with {{Caustics}}},
+  shorttitle = {{{ReSTIR BDPT}}},
+  author = {Hedstrom, Trevor and Kettunen, Markus and Lin, Daqi and Wyman, Chris and Li, Tzu-Mao},
+  year = {2025},
+  month = jun,
+  journal = {ACM Transactions on Graphics},
+  pages = {3744898},
+  issn = {0730-0301, 1557-7368},
+  doi = {10.1145/3744898},
+  urldate = {2025-07-06},
+  abstract = {Recent spatiotemporal resampling algorithms (ReSTIR) accelerate real-time path tracing by reusing samples between pixels and frames. However, existing methods are limited by the sampling quality of path tracing, making them inefficient for scenes with caustics and hard-to-reach lights. We develop a ReSTIR variant incorporating bidirectional path tracing that significantly improves the sampling quality in these scenes.             Combining bidirectional path tracing and ReSTIR introduces multiple challenges: the generalized resampled importance sampling (GRIS) behind ReSTIR is, by default, not aware of how a path was sampled, which complicates reuse of bidirectional paths. Light tracing is also challenging since light subpaths can contribute to all pixels. To address these challenges, we apply GRIS in a sampling technique-aware extended path space, design a bidirectional hybrid shift mapping, and introduce caustics reservoirs that can accumulate caustics across frames. Our method takes around 50ms per frame across our test scenes, and achieves significantly lower error compared to prior unidirectional ReSTIR variants running in equal time.},
+  langid = {english},
+  file = {D\:\\Research\\Zotero\\storage\\PJR53CN8\\Hedstrom et al. - 2025 - ReSTIR BDPT Bidirectional ReSTIR Path Tracing with Caustics.pdf;D\:\\Research\\Zotero\\storage\\QJYJPTA2\\tog-24-0066-File002.pdf}
+}
+
+@article{lin2022,
+  title = {Generalized Resampled Importance Sampling: Foundations of {{ReSTIR}}},
+  shorttitle = {Generalized Resampled Importance Sampling},
+  author = {Lin, Daqi and Kettunen, Markus and Bitterli, Benedikt and Pantaleoni, Jacopo and Yuksel, Cem and Wyman, Chris},
+  year = {2022},
+  month = jul,
+  journal = {ACM Trans. Graph.},
+  volume = {41},
+  number = {4},
+  pages = {75:1--75:23},
+  issn = {0730-0301},
+  doi = {10.1145/3528223.3530158},
+  urldate = {2025-02-24},
+  abstract = {As scenes become ever more complex and real-time applications embrace ray tracing, path sampling algorithms that maximize quality at low sample counts become vital. Recent resampling algorithms building on Talbot et al.'s [2005] resampled importance sampling (RIS) reuse paths spatiotemporally to render surprisingly complex light transport with a few samples per pixel. These reservoir-based spatiotemporal importance resamplers (ReSTIR) and their underlying RIS theory make various assumptions, including sample independence. But sample reuse introduces correlation, so ReSTIR-style iterative reuse loses most convergence guarantees that RIS theoretically provides.We introduce generalized resampled importance sampling (GRIS) to extend the theory, allowing RIS on correlated samples, with unknown PDFs and taken from varied domains. This solidifies the theoretical foundation, allowing us to derive variance bounds and convergence conditions in ReSTIR-based samplers. It also guides practical algorithm design and enables advanced path reuse between pixels via complex shift mappings.We show a path-traced resampler (ReSTIR PT) running interactively on complex scenes, capturing many-bounce diffuse and specular lighting while shading just one path per pixel. With our new theoretical foundation, we can also modify the algorithm to guarantee convergence for offline renderers.},
+  file = {D:\Research\Zotero\storage\KQTU6Z4K\Lin et al. - 2022 - Generalized resampled importance sampling foundat.pdf}
+}
+
+@article{ouyang2021,
+  title = {{{ReSTIR GI}}: {{Path Resampling}} for {{Real-Time Path Tracing}}},
+  shorttitle = {{{ReSTIR GI}}},
+  author = {Ouyang, Y. and Liu, S. and Kettunen, M. and Pharr, M. and Pantaleoni, J.},
+  year = {2021},
+  journal = {Computer Graphics Forum},
+  volume = {40},
+  number = {8},
+  pages = {17--29},
+  issn = {1467-8659},
+  doi = {10.1111/cgf.14378},
+  urldate = {2024-05-02},
+  abstract = {Even with the advent of hardware-accelerated ray tracing in modern GPUs, only a small number of rays can be traced at each pixel in real-time applications. This presents a significant challenge for path tracing, even when augmented with state-of-the art denoising algorithms. While the recently-developed ReSTIR algorithm [BWP{$\ast$}20] enables high-quality renderings of scenes with millions of light sources using just a few shadow rays at each pixel, there remains a need for effective algorithms to sample indirect illumination. We introduce an effective path sampling algorithm for indirect lighting that is suitable to highly parallel GPU architectures. Building on the screen-space spatio-temporal resampling principles of ReSTIR, our approach resamples multi-bounce indirect lighting paths obtained by path tracing. Doing so allows sharing information about important paths that contribute to lighting both across time and pixels in the image. The resulting algorithm achieves a substantial error reduction compared to path tracing: at a single sample per pixel every frame, our algorithm achieves MSE improvements ranging from 9.3{\texttimes} to 166{\texttimes} in our test scenes. In conjunction with a denoiser, it leads to high-quality path traced global illumination at real-time frame rates on modern GPUs.},
+  copyright = {{\copyright} 2021 The Author(s) Computer Graphics Forum {\copyright} 2021 The Eurographics Association and John Wiley \& Sons Ltd. Published by John Wiley \& Sons Ltd.},
+  langid = {english},
+  keywords = {CCS Concepts,Computing methodologies  Rendering,Ray tracing},
+  file = {D\:\\Research\\Zotero\\storage\\Y45ISHZB\\Ouyang et al. - 2021 - ReSTIR GI Path Resampling for Real-Time Path Trac.pdf;D\:\\Research\\Zotero\\storage\\AIPSQMU8\\cgf.html}
+}
+
+@book{talbot2005,
+  title = {Importance {{Resampling}} for {{Global Illumination}}},
+  author = {Talbot, Justin and Cline, David and Egbert, Parris},
+  year = {2005},
+  publisher = {The Eurographics Association},
+  issn = {1727-3463},
+  urldate = {2025-03-04},
+  abstract = {This paper develops importance resampling into a variance reduction technique for Monte Carlo integration. Importance resampling is a sample generation technique that can be used to generate more equally weighted samples for importance sampling. This can lead to significant variance reduction over standard importance sampling for common rendering problems. We show how to select the importance resampling parameters for near optimal variance reduction. We demonstrate the robustness of this technique on common global illumination problems and achieve a 10\%-70\% variance reduction over standard importance sampling for direct lighting. We conclude that further variance reduction could be achieved with cheaper sampling methods.},
+  isbn = {978-3-905673-23-4},
+  langid = {english},
+  file = {D:\Research\Zotero\storage\8JRLMSXQ\Talbot et al. - 2005 - Importance Resampling for Global Illumination.pdf}
+}
+
+@mastersthesis{talbot2005a,
+  title = {Importance {{Resampling}} for {{Global Illumination}}},
+  author = {Talbot, Justin},
+  year = {2005},
+  month = sep,
+  school = {Brigham Young University},
+  file = {D\:\\Research\\Zotero\\storage\\26Y4V2SC\\Talbot - 2005 - Importance Resampling for Global Illumination.pdf;D\:\\Research\\Zotero\\storage\\82RTEJZV\\663.html}
+}
+
+@inproceedings{veach1995,
+  title = {Optimally Combining Sampling Techniques for {{Monte Carlo}} Rendering},
+  booktitle = {Proceedings of the 22nd Annual Conference on {{Computer}} Graphics and Interactive Techniques  - {{SIGGRAPH}} '95},
+  author = {Veach, Eric and Guibas, Leonidas J.},
+  year = {1995},
+  pages = {419--428},
+  publisher = {ACM Press},
+  doi = {10.1145/218380.218498},
+  urldate = {2025-06-08},
+  isbn = {978-0-89791-701-8},
+  langid = {english},
+  file = {D:\Research\Zotero\storage\SQ724AZ7\Veach and Guibas - 1995 - Optimally combining sampling techniques for Monte Carlo rendering.pdf}
+}
+
+@article{werner2024,
+  title = {{{ReSTIR Subsurface Scattering}} for {{Real-Time Path Tracing}}},
+  author = {Werner, Mirco and Sch{\"u}{\ss}ler, Vincent and Dachsbacher, Carsten},
+  year = {2024},
+  month = aug,
+  journal = {Proc. ACM Comput. Graph. Interact. Tech.},
+  volume = {7},
+  number = {3},
+  pages = {36:1--36:19},
+  doi = {10.1145/3675372},
+  urldate = {2025-02-18},
+  abstract = {Subsurface scattering is an important visual cue and in real-time rendering it is often approximated using screen-space algorithms. Path tracing with the diffusion approximation can easily overcome the limitations of these algorithms, but increases image noise. We improve its efficiency by applying reservoir-based spatiotemporal importance resampling (ReSTIR) to subsurface light transport paths. For this, we adopt BSSRDF importance sampling for generating candidates. Further, spatiotemporal reuse requires shifting paths between domains. We observe that different image regions benefit most from either reconnecting through the translucent object (reconnection shift), or one vertex later (delayed reconnection shift). We first introduce a local subsurface scattering specific criterion for a hybrid shift that deterministically selects one of the two shifts for a path. Due to the locality, it cannot always choose the most efficient shift, e.g. near shadow boundaries. Therefore, we additionally propose a novel sequential shift to combine multiple shift mappings: We execute subsequent resampling passes, each one using a different shift, which does not require to deterministically choose a shift for a path. Instead, resampling can pick the most successful shift implicitly. Our method achieves realtime performance and significantly reduces noise and denoising artifacts in regions with visible subsurface scattering compared to standard path tracing with equal render time.},
+  file = {D:\Research\Zotero\storage\DC5JBQ6C\Werner et al. - 2024 - ReSTIR Subsurface Scattering for Real-Time Path Tr.pdf}
+}
+
+@article{wyman2021,
+  title = {Rearchitecting {{Spatiotemporal Resampling}} for {{Production}}},
+  author = {Wyman, Chris and Panteleev, Alexey},
+  year = {2021},
+  journal = {High-Performance Graphics - Symposium Papers},
+  pages = {19 pages},
+  publisher = {The Eurographics Association},
+  issn = {2079-8687},
+  doi = {10.2312/HPG.20211281},
+  urldate = {2025-05-26},
+  abstract = {Recent work by Bitterli et al. [BWP*20] introduced a real-time, many-light algorithm for rendering dynamic direct illumination from millions of lights by iteratively applying resampled importance sampling using weighted reservoir sampling. While enabling new levels of lighting complexity in real-time, the total cost remained beyond the budgets of even the most computationally demanding games. We introduce key algorithmic improvements developed while productizing this method that collectively reduce lighting costs by up to 7x, dramatically improve memory coherence, shrink the required ray budget, increase rendering quality, and expose parameters that enable trading quality for performance.},
+  isbn = {9783038681564},
+  keywords = {Computing methodologies,Ray tracing,Rendering},
+  file = {D:\Research\Zotero\storage\9KYXM3RU\Wyman and Panteleev - 2021 - Rearchitecting Spatiotemporal Resampling for Production.pdf}
+}

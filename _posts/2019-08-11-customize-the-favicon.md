@@ -35,3 +35,22 @@ The following table will help you understand the changes to the favicon files:
 {: .prompt-info }
 
 The next time you build the site, the favicon will be replaced with a customized edition.
+
+Testing {% cite bitterli2020 %}.
+
+<div class="compare">
+  <img class="compare__image-one compare-img" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp">
+  <div class="compare__mask">
+    <img class="compare__image-two compare-img" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp">
+  </div>
+  <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
+  <div class="compare__separator">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="compare__icon" viewBox="0 0 16 16"><path d="M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14" stroke="currentColor"></path></svg>
+  </div>
+
+</div>
+
+References
+----------
+
+{% bibliography --cited %}

@@ -3,7 +3,7 @@ import {
   loadImg,
   imgPopup,
   initClipboard,
-  loadMermaid
+  loadMermaid,
 } from './modules/components';
 
 loadImg();

@@ -141,7 +141,7 @@ The mathematics powered by [**MathJax**](https://www.mathjax.org/):
 
 $$
 \begin{equation}
-  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \large\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
   \label{eq:series}
 \end{equation}
 $$
