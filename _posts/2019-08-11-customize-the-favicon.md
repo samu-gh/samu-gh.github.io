@@ -39,9 +39,9 @@ The next time you build the site, the favicon will be replaced with a customized
 Testing {% cite bitterli2020 %}.
 
 <div class="compare">
-  <img class="compare__image-one compare-img" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp">
+  <img class="compare__image-one compare-img" alt="image-one" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp">
   <div class="compare__mask">
-    <img class="compare__image-two compare-img" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp">
+    <img class="compare__image-two compare-img" alt="image-two" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp">
   </div>
   <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
   <div class="compare__separator">
